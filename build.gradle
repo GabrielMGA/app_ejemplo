@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    javaMainClass = "com.ejemplo.demo.DemoApplication"
+}
+
+task ejemploRun(type: JavaExec) {
+    group = "com.ejemplo"
+    classpath = sourceSets.main.runtimeClasspath
+    main = javaMainClass
+}
